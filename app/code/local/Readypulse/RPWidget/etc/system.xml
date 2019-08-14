@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <tabs>
+        <readypulse_extensions>
+            <label>Readypulse Widget</label>
+            <sort_order>199</sort_order>
+        </readypulse_extensions>
+    </tabs>
+    <sections>
+        <rpwidget translate="label" >
+            <label>Widget Settings</label>
+            <tab>readypulse_extensions</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>95</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <catalogapiuid translate="label">
+                            <label>Catalog REST API Key</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>rpwidget/catalogapi</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </catalogapiuid>
+                        <catalogapikey translate="label">
+                            <label>Catalog REST API Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>rpwidget/catalogapi</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </catalogapikey>
+                        <utoken translate="label">
+                            <label>Readypulse User Token</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>rpwidget/catalogapi</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </utoken>
+                        <cachetime translate="label">
+                            <label>Refresh Interval</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Duration for which the widget contents are cached. This make the widgets render faster. Values are in minutes. Default: 60 mins (1 hour)</comment>
+                        </cachetime>
+                        <clearcache translate="label">
+                            <label>Clear Magento cache when the widgets are saved</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>rpwidget/cacheoption</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Setting this option to "Yes" will flush the entire magento cache as soon as a widget is created or updated. If the option is set to "No", the cache will not get flushed automatically. However for changes to show effect, you will have to flush the cache manually from the "System / Cache Management" page.</comment>
+                        </clearcache>
+                    </fields>
+                </general>
+            </groups>
+        </rpwidget>
+    </sections>
+</config>

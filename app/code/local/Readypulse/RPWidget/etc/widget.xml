@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <rpwidget_feed type="rpwidget/feed" translate="name description">
+        <name>ReadyPulse Widget: Feed</name>
+        <description type="desc">Fetch RPWidget Feed</description>
+        <parameters>
+            <warning translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <value></value>
+                <type>label</type>
+                <helper_block>
+                    <type>rpwidget/label</type>
+                </helper_block>
+            </warning>
+            <id translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>ReadyPulse Widget ID</label>
+                <type>text</type>
+                <description>ID for the widget can be obtained from the widget install pages on readypulse.com/curations.</description>
+            </id>
+            <nativelook translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Use Magento's Native Theme</label>
+                <type>select</type>
+                <description>Yes: Widget is themed to look like the magento UI; No: The widget is themed based on the theme configured on ReadyPulse</description>
+                <values>
+                     <false translate="label">
+                        <value>false</value>
+                        <label>No</label>
+                    </false>
+                    <true translate="label">
+                        <value>true</value>
+                        <label>Yes</label>
+                    </true>
+                </values>
+            </nativelook>
+            <theme translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>ReadyPulse Theme ID</label>
+                <type>text</type>
+                <value></value>
+                <description>ID for the ReadyPulse theme can be obtained from the widget install pages on readypulse.com/curations.</description>
+                <depends>
+                    <nativelook>
+                        <value>false</value>
+                    </nativelook>
+                </depends>
+            </theme>
+            <height translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Height</label>
+                <type>text</type>
+                <value>500</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </height>
+            <width translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Width</label>
+                <type>text</type>
+                <value>400</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </width>
+            
+            <show-header translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Show Widget Header</label>
+                <description>Yes: Shows widget header; No: Hides widget header</description>
+                <type>select</type>
+                <values>
+                    <true translate="label">
+                        <value>true</value>
+                        <label>Yes</label>
+                    </true>
+                    <false translate="label">
+                        <value>false</value>
+                        <label>No</label>
+                    </false>
+                </values>
+                <depends>
+                    <nativelook>
+                        <value>true</value>
+                    </nativelook>
+                </depends>
+            </show-header>
+            <show-footer translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Show Widget Footer</label>
+                <description>Yes: Shows widget footer; No: Hides widget footer</description>
+                <type>select</type>
+                <values>
+                    <true translate="label">
+                        <value>true</value>
+                        <label>Yes</label>
+                    </true>
+                    <false translate="label">
+                        <value>false</value>
+                        <label>No</label>
+                    </false>
+                </values>
+                <depends>
+                    <nativelook>
+                        <value>true</value>
+                    </nativelook>
+                </depends>
+            </show-footer>
+            <scope translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Type</label>
+                <description>Set a run-time filter on the widget content.</description>
+                <type>select</type>
+                <values>
+                    <select_scope translate="label">
+                        <value></value>
+                        <label>Select Scope</label>
+                    </select_scope>
+                    <product_category translate="label">
+                        <value>product_category</value>
+                        <label>Product Categories</label>
+                    </product_category>
+                    <product_id translate="label">
+                        <value>product_id</value>
+                        <label>Product Id</label>
+                    </product_id>
+                    <keyword translate="label">
+                        <value>keyword</value>
+                        <label>Keyword</label>
+                    </keyword>
+                </values>
+            </scope>
+            <scopevalue translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Value</label>
+                <description>Comma separated list of terms to use as filters.</description>
+                <type>text</type>
+                <value></value>
+            </scopevalue>
+          
+            <template translate="label">
+                <required>1</required>
+                <visible>0</visible>
+                <label>Template</label>
+                <type>select</type>
+                <value>rpwidget/feed.phtml</value>
+                <values>
+                    <default translate="label">
+                        <value>rpwidget/feed.phtml</value>
+                        <label>Feed</label>
+                    </default>
+                </values>
+            </template>
+        </parameters>
+    </rpwidget_feed>
+    
+    
+    <rpwidget_album type="rpwidget/album" translate="name description">
+        <name>ReadyPulse Widget: Album</name>
+        <description type="desc">Fetch RPWidget Album</description>
+        <parameters>
+            <warning translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <value></value>
+                <type>label</type>
+                <helper_block>
+                    <type>rpwidget/label</type>
+                </helper_block>
+            </warning>
+            <id translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>ReadyPulse Widget ID</label>
+                <type>text</type>
+                <description>ID for the widget can be obtained from the widget install pages on readypulse.com/curations.</description>
+            </id>
+            <theme translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>ReadyPulse Theme ID</label>
+                <type>text</type>
+                <value></value>
+                <description>ID for the ReadyPulse theme can be obtained from the widget install pages on readypulse.com/curations.</description>
+            </theme>
+            <height translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Height</label>
+                <type>text</type>
+                <value>400</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </height>
+            <width translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Width</label>
+                <type>text</type>
+                <value>600</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </width>
+            
+            
+            <scope translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Type</label>
+                <description>Set a run-time filter on the widget content.</description>
+                <type>select</type>
+                <values>
+                    <select_scope translate="label">
+                        <value></value>
+                        <label>Select Scope</label>
+                    </select_scope>
+                    <product_category translate="label">
+                        <value>product_category</value>
+                        <label>Product Categories</label>
+                    </product_category>
+                    <product_id translate="label">
+                        <value>product_id</value>
+                        <label>Product Id</label>
+                    </product_id>
+                    <keyword translate="label">
+                        <value>keyword</value>
+                        <label>Keyword</label>
+                    </keyword>
+                </values>
+            </scope>
+            <scopevalue translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Value</label>
+                <description>Comma separated list of terms to use as filters.</description>
+                <type>text</type>
+                <value></value>
+            </scopevalue>
+            
+            <template translate="label">
+                <required>1</required>
+                <visible>0</visible>
+                <label>Template</label>
+                <type>select</type>
+                <value>rpwidget/album.phtml</value>
+                <values>
+                    <default translate="label">
+                        <value>rpwidget/album.phtml</value>
+                        <label>Album</label>
+                    </default>
+                </values>
+            </template>
+        </parameters>
+    </rpwidget_album>
+    
+    <rpwidget_gallery type="rpwidget/gallery" translate="name description">
+        <name>ReadyPulse Widget: Gallery</name>
+        <description type="desc">Fetch RPWidget Gallery</description>
+        <parameters>
+            <warning translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <value></value>
+                <type>label</type>
+                <helper_block>
+                    <type>rpwidget/label</type>
+                </helper_block>
+            </warning>
+            <id translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>ReadyPulse Widget ID</label>
+                <type>text</type>
+                <description>ID for the widget can be obtained from the widget install pages on readypulse.com/curations.</description>
+            </id>
+            <theme translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>ReadyPulse Theme ID</label>
+                <type>text</type>
+                <value></value>
+                <description>ID for the ReadyPulse theme can be obtained from the widget install pages on readypulse.com/curations.</description>
+            </theme>
+            <height translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Height</label>
+                <type>text</type>
+                <value>800</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </height>
+            <width translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Widget Width</label>
+                <type>text</type>
+                <value>900</value>
+                <description>These are suggested defaults. Feel free to change as per your requirements. Values are in pixels.</description>
+            </width>
+            
+            
+            <scope translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Type</label>
+                <description>Set a run-time filter on the widget content.</description>
+                <type>select</type>
+                <values>
+                    <select_scope translate="label">
+                        <value></value>
+                        <label>Select Scope</label>
+                    </select_scope>
+                    <product_category translate="label">
+                        <value>product_category</value>
+                        <label>Product Categories</label>
+                    </product_category>
+                    <product_id translate="label">
+                        <value>product_id</value>
+                        <label>Product Id</label>
+                    </product_id>
+                    <keyword translate="label">
+                        <value>keyword</value>
+                        <label>Keyword</label>
+                    </keyword>
+                </values>
+            </scope>
+            <scopevalue translate="label description">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Filter Value</label>
+                <description>Comma separated list of terms to use as filters.</description>
+                <type>text</type>
+                <value></value>
+            </scopevalue>
+            
+            <template translate="label">
+                <required>1</required>
+                <visible>0</visible>
+                <label>Template</label>
+                <type>select</type>
+                <value>rpwidget/gallery.phtml</value>
+                <values>
+                    <default translate="label">
+                        <value>rpwidget/gallery.phtml</value>
+                        <label>Gallery</label>
+                    </default>
+                </values>
+            </template>
+        </parameters>
+    </rpwidget_gallery>
+</widgets>

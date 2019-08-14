@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Readypulse_RPWidget",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "This is beta version",
+    "authors": [
+    {
+        "name": "vinod jain",
+        "email": "jvinodk1028@yahoo.co.in"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

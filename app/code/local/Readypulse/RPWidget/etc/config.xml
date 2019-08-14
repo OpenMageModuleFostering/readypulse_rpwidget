@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Readypulse_RPWidget>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.1.2</version>
+        </Readypulse_RPWidget>
+    </modules>
+	
+    <global>
+        <blocks>
+            <rpwidget>
+                <class>Readypulse_RPWidget_Block</class>
+            </rpwidget>
+        </blocks>
+        <helpers>
+            <rpwidget>
+                <class>Readypulse_RPWidget_Helper</class>
+            </rpwidget>
+        </helpers>
+        <models>
+           
+            <rpwidget>
+                <class>Readypulse_RPWidget_Model</class>
+            </rpwidget>   
+           
+        </models>
+        <resources>
+            <rpwidget_setup>
+                <setup>
+                    <module>Readypulse_RPWidget</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </rpwidget_setup>
+            <rpwidget_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </rpwidget_write>
+            <rpwidget_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </rpwidget_read>
+        </resources>
+    </global>
+        
+    <default>
+        <rpwidget>
+            <general>
+                <catalogapiuid>rp</catalogapiuid>
+                <catalogapikey>12345</catalogapikey>
+                <utoken></utoken>
+                <cachetime>60</cachetime>
+                <clearcache>false</clearcache>
+            </general>			
+        </rpwidget>
+		
+    </default>
+	
+    <frontend>
+        <layout>
+            <updates>
+                <rpwidget>
+                    <file>rpwidget.xml</file>
+                </rpwidget>
+            </updates>
+        </layout>
+        <routers>
+            <rpwidget>
+                <use>standard</use>
+                <args>
+                    <module>Readypulse_RPWidget</module>
+                    <frontName>rpwidget</frontName>
+                </args>
+            </rpwidget>
+        </routers>  
+    </frontend>
+    
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <rpwidget>
+                                            <title>Ready Pulse setting</title>
+                                        </rpwidget>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <events>
+            <widget_widget_instance_save_after>
+                <observers>
+                    <Readypulse_RPWidget>
+                        <model>rpwidget/observer</model>
+                        <method>widgetWidgetInstanceSaveAfter</method>
+                    </Readypulse_RPWidget>
+                </observers>
+            </widget_widget_instance_save_after>
+        </events>
+    </adminhtml>
+    
+</config>

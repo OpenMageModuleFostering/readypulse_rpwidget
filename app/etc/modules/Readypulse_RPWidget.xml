@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Readypulse_RPWidget>
+		    <active>true</active>
+		    <codePool>local</codePool>		   
+		</Readypulse_RPWidget>
+	</modules>
+</config>
